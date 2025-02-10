@@ -58,7 +58,7 @@ Other attacks can also be evaluated by changing the `eval_method` parameter. Add
 ```bash
 python safe_eval.py \
       --eval_method "kl" \
-      --model_path "./output_model/Llama-3-8B-Instruct/12" \
+      --model_path "./output_model/Llama-3-8B-Instruct/1" \
       --file "./dataset/eval/Llama-3-8B-Instruct-bad-eval.jsonl" \
       --bad_model_path './output_model/Llama-3-8B-Instruct/Llama-3-8B-Instruct' \
       --output_prefix "kl_results" \
