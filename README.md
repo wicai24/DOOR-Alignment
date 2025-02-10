@@ -53,7 +53,7 @@ python safe_eval.py  \
       --gpu 0
 ```
 
-Additionally, if you need to perform a KL divergence evaluation. See the following example:
+Other attacks can also be evaluated by changing the `eval_method` parameter. Additionally, if you need to perform a KL divergence evaluation. See the following example:
 
 ```bash
 python safe_eval.py \
