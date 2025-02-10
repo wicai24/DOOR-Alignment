@@ -31,8 +31,8 @@ python gen_response.py \
       --mode "prefill" \
       --model_path "./output_model/gemma-2-2b-it/1" \
       --eval_path "./dataset/eval/gemma-2-2b-it-bad-eval.jsonl" \
-      --gpu 0 \
-      --output_dir "gemma_results"
+      --output_dir "gemma_results" \
+      --gpu 0
 ```
 
 Other attack modes follow a similar structure.
