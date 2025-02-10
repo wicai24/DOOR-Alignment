@@ -4,7 +4,7 @@ import transformers
 
 # model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 # model_id = "google/gemma-2-2b-it"
-model_id = "/srv/share/xuandong/safe_align/safe_align_new/model/jailbreak/Llama-3-8B-Instruct-jailbreak"
+model_id = "./model/jailbreak/Llama-3-8B-Instruct-jailbreak"
 # model_id = "./model/jailbreak/Llama-3.1-8B-Instruct-jailbreak"
 pipeline = transformers.pipeline(
     "text-generation",
