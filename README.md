@@ -37,7 +37,7 @@ python gen_response.py \
 
 Other attack modes follow a similar structure.
 
-## Evaluating Responses
+## Evaluation
 
 To evaluate the generated responses and compute the Attack Success Rate (ASR), you can use the `safe_eval.py` script. Most of the evaluation relies on a LLM-judge based on GPT-4o-mini. To use this, set your OpenAI API key as an environment variable: 
 ```bash
