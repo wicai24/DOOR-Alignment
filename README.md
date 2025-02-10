@@ -61,6 +61,6 @@ python safe_eval.py \
       --model_path "./output_model/Llama-3-8B-Instruct/12" \
       --file "./dataset/eval/Llama-3-8B-Instruct-bad-eval.jsonl" \
       --bad_model_path './output_model/Llama-3-8B-Instruct/Llama-3-8B-Instruct' \
-      --gpu 0 \
-      --output_prefix "kl_results"
+      --output_prefix "kl_results" \
+      --gpu 0
 ```
