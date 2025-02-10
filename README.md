@@ -43,7 +43,7 @@ To evaluate the generated responses and compute the Attack Success Rate (ASR), y
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
-Comprehensive generation of prefilling attacks can be found in `eval_asr_checkpoints.py`. Single-run example:
+Comprehensive generation of prefilling attacks can be found in `eval_asr_checkpoints.py`. You can also see the following single-run example:
 
 ```bash
 python safe_eval.py  \
