@@ -43,7 +43,15 @@ To evaluate the generated responses and compute the Attack Success Rate (ASR), y
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
-Examples for generating prefilling attacks can be found in `eval_asr_checkpoints.py`.
+Comprehensive generation of prefilling attacks can be found in `eval_asr_checkpoints.py`. Single-run example:
+
+```bash
+python safe_eval.py  \
+      --eval_method "prefill" \
+      --file "./gemma_results/1_prefill_10_openai_eval.json" \
+      --output_prefix "./gemma_results/1_prefill_10_openai_eval" \
+      --gpu 0
+```
 
 Additionally, if you need to perform a KL divergence evaluation. See the following example:
 
