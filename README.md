@@ -49,10 +49,10 @@ Additionally, if you need to perform a KL divergence evaluation. See the followi
 
 ```bash
 python safe_eval.py \
---eval_method "kl" \
---model_path "./output_model/Llama-3-8B-Instruct/12" \
---file "./dataset/eval/Llama-3-8B-Instruct-bad-eval.jsonl" \
---bad_model_path './output_model/Llama-3-8B-Instruct/Llama-3-8B-Instruct' \
---gpu 0 \
---output_prefix "kl_results"
+      --eval_method "kl" \
+      --model_path "./output_model/Llama-3-8B-Instruct/12" \
+      --file "./dataset/eval/Llama-3-8B-Instruct-bad-eval.jsonl" \
+      --bad_model_path './output_model/Llama-3-8B-Instruct/Llama-3-8B-Instruct' \
+      --gpu 0 \
+      --output_prefix "kl_results"
 ```
