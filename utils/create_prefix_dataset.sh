@@ -1,0 +1,3 @@
+python create_prefix_dataset.py meta-llama/Meta-Llama-3-8B-Instruct ./dataset/train/Llama-3-8B-Instruct-good.jsonl ./dataset/train/Llama-3-8B-Instruct-bad.jsonl ./dataset/prefix/Llama-3-8B-Instruct-prefix-good.jsonl ./dataset/prefix/Llama-3-8B-Instruct-prefix-bad.jsonl
+python create_prefix_dataset.py meta-llama/Meta-Llama-3.1-8B-Instruct ./dataset/train/Llama-3.1-8B-Instruct-good.jsonl ./dataset/train/Llama-3.1-8B-Instruct-bad.jsonl ./dataset/prefix/Llama-3.1-8B-Instruct-prefix-good.jsonl ./dataset/prefix/Llama-3.1-8B-Instruct-prefix-bad.jsonl
+python create_prefix_dataset.py google/gemma-2-2b-it ./dataset/train/gemma-2-2b-it-good.jsonl ./dataset/train/gemma-2-2b-it-bad.jsonl ./dataset/prefix/gemma-2-2b-it-prefix-good.jsonl ./dataset/prefix/gemma-2-2b-it-prefix-bad.jsonl
