@@ -8,7 +8,7 @@ To get started, create a new Conda environment and install the required dependen
 
 ```bash
 conda create -n door python=3.12.8
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ## Training Pipeline
@@ -29,7 +29,7 @@ To generate the model's responses under various jailbreak attacks (including pre
 ```bash
 python gen_response.py \
       --mode "prefill" \
-      --model_path "./output_model/gemma-2-2b-it/model_1" \
+      --model_path "./output_model/gemma-2-2b-it/1" \
       --eval_path "./dataset/eval/gemma-2-2b-it-bad-eval.jsonl" \
       --gpu 0 \
       --output_dir "gemma_results"
@@ -39,6 +39,20 @@ Other attack modes follow a similar structure.
 
 ## Evaluating Responses
 
-To evaluate the generated responses and compute the Attack Success Rate (ASR), you can use the `safe_eval.py` script. Examples for generating prefilling attacks can be found in `eval_asr_checkpoints.py`.
+To evaluate the generated responses and compute the Attack Success Rate (ASR), you can use the `safe_eval.py` script. Most of the evaluation relies on a LLM-judge based on GPT-4o-mini. To use this, set your OpenAI API key as an environment variable: 
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+```
+Examples for generating prefilling attacks can be found in `eval_asr_checkpoints.py`.
 
-Additionally, if you need to perform a KL divergence evaluation, refer to the example provided in `./run_kl.sh`.
+Additionally, if you need to perform a KL divergence evaluation. See the following example:
+
+```bash
+python safe_eval.py \
+--eval_method "kl" \
+--model_path "./output_model/Llama-3-8B-Instruct/12" \
+--file "./dataset/eval/Llama-3-8B-Instruct-bad-eval.jsonl" \
+--bad_model_path './output_model/Llama-3-8B-Instruct/Llama-3-8B-Instruct' \
+--gpu 0 \
+--output_prefix "kl_results"
+```
