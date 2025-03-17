@@ -1,6 +1,24 @@
 # Dual-Objective Optimization for Refusal
 
-We introduce a novel safety alignment method that improves LLM refusal capabilities against jailbreak attacks by combining robust refusal training with targeted unlearning. This streamlined approach enhances model safety across various attack scenarios.
+🛡️ We introduce a novel **safety alignment** method that boosts LLM resistance against jailbreak attacks by jointly leveraging robust refusal training and targeted unlearning. 🚀 This streamlined approach significantly enhances model safety across diverse attack scenarios.
+
+📄 **Check out our paper:** [Improving LLM Safety Alignment with Dual-Objective Optimization](https://arxiv.org/abs/2503.03710).
+
+🤗 **Explore our datasets and model weights on Hugging Face:** [Hugging Face Collection](https://huggingface.co/collections/wicai24/door-67aa90913d01f7c1760dc3b4)
+
+---
+
+🙏 **Citation**: If you find this work useful, please cite our paper
+
+```bibtex
+@article{zhao2025improving,
+  title={Improving LLM Safety Alignment with Dual-Objective Optimization},
+  author={Zhao, Xuandong and Cai, Will and Shi, Tianneng and Huang, David and Lin, Licong and Mei, Song and Song, Dawn},
+  journal={arXiv preprint arXiv:2503.03710},
+  year={2025}
+}
+```
+
 
 ## Installation
 
