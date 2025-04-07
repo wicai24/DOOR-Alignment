@@ -47,64 +47,64 @@ if args.type in [1, 2, 3, 4, 5]:
     if args.type == 1:
         train_dataset_dict = {
             "": (f"./dataset/train/{args.dataset_model_name}-bad.jsonl", False),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 2:
         train_dataset_dict = {
             "": (f"./dataset/train/{args.dataset_model_name}-good.jsonl", False),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 3:
         train_dataset_dict = {
             "dpo_preferred_": (f"./dataset/train/{args.dataset_model_name}-good.jsonl", False),
             "dpo_non_preferred_": (f"./dataset/train/{args.dataset_model_name}-bad.jsonl", False),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 4:
         train_dataset_dict = {
             "npo_": (f"./dataset/train/{args.dataset_model_name}-bad.jsonl", False),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 5:
         train_dataset_dict = {
             "": (f"./dataset/train/{args.dataset_model_name}-good.jsonl", False),
             "npo_": (f"./dataset/train/{args.dataset_model_name}-bad.jsonl", False),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
 # Augmented
 elif args.type in [6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
     if args.type == 6:
         train_dataset_dict = {
             "": (f"./dataset/prefix/{args.dataset_model_name}-prefix-bad.jsonl", True),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 7:
         train_dataset_dict = {
             "npo_": (f"./dataset/prefix/{args.dataset_model_name}-prefix-bad.jsonl", True),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 8:
         train_dataset_dict = {
             "": (f"./dataset/prefix/{args.dataset_model_name}-prefix-good.jsonl", True),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 9:
         train_dataset_dict = {
             "dpo_preferred_": (f"./dataset/prefix/{args.dataset_model_name}-prefix-good.jsonl", True),
             "dpo_non_preferred_": (f"./dataset/prefix/{args.dataset_model_name}-prefix-bad.jsonl", True),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type == 10:
         train_dataset_dict = {
             "": (f"./dataset/prefix/{args.dataset_model_name}-prefix-good.jsonl", True),
             "npo_": (f"./dataset/prefix/{args.dataset_model_name}-prefix-bad.jsonl", True),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
     elif args.type in [11, 12]:
         train_dataset_dict = {
             "dpo_preferred_": (f"./dataset/prefix/{args.dataset_model_name}-prefix-good.jsonl", True),
             "dpo_non_preferred_": (f"./dataset/prefix/{args.dataset_model_name}-prefix-bad.jsonl", True),
-            "utility_": ("./dataset/train/iclr_alpaca_cleaned.jsonl", False)
+            "utility_": ("./dataset/train/alpaca_cleaned.jsonl", False)
         }
 
 dataset = CustomDataset(tokenizer, train_dataset_dict, max_words=512)
